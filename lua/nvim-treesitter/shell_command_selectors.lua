@@ -93,7 +93,7 @@ function M.select_compiler_args(repo, compiler)
       "-Os",
       "/utf-8",
       "/LD",
-      "-std=c++11",
+      "-std=c99",
     }
   elseif string.match(compiler, "zig$") or string.match(compiler, "zig.exe$") then
     return {
@@ -105,7 +105,7 @@ function M.select_compiler_args(repo, compiler)
       "-Isrc",
       "-shared",
       "-Os",
-      "-std=c++11",
+      "-std=c99",
     }
   else
     local args = {
@@ -114,6 +114,7 @@ function M.select_compiler_args(repo, compiler)
       "-I./src",
       repo.files,
       "-Os",
+      "-std=c99"
     }
     if fn.has "mac" == 1 then
       table.insert(args, "-bundle")
