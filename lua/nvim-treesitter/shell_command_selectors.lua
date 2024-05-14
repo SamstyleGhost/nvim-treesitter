@@ -93,7 +93,7 @@ function M.select_compiler_args(repo, compiler)
       "-Os",
       "/utf-8",
       "/LD",
-      "-std=c99",
+      "-std=c++11",
     }
   elseif string.match(compiler, "zig$") or string.match(compiler, "zig.exe$") then
     return {
@@ -105,7 +105,7 @@ function M.select_compiler_args(repo, compiler)
       "-Isrc",
       "-shared",
       "-Os",
-      "-std=c99",
+      "-std=c++11",
     }
   else
     local args = {
