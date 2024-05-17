@@ -1,4 +1,4 @@
-CFLAGS       ?= -Os -std=c99 -fPIC
+CFLAGS       ?= -Os -std=gnu99 -fPIC
 CXX_STANDARD ?= c++14
 CXXFLAGS     ?= -Os -std=$(CXX_STANDARD) -fPIC
 LDFLAGS      ?= 
